@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <head th:replace="~{fragment/head :: demo-head}"><title></title></head>
+    <body>
+        <div class="container col-10">
+            <nav th:replace="~{fragment/navigation :: demo-navigation}"></nav>
+            <br />
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h1>SUCSSES!</h1>
+                </div>
+
+            </div>
+        </div>
+        <span  th:replace="~{fragment/scripts :: scripts}"></span>
+    </body>
+</html>

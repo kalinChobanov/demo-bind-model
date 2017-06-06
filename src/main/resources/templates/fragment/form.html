@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <form  th:fragment="demo-form" th:object="${person}" method="post" action="/create">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" th:field="*{name}" name="name" aria-describedby="nameHelp" placeholder="Enter you name"/>
+                <small id="nameHelp" class="form-text text-muted">We'll never share your name with anyone else :)</small>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city"  th:field="*{address.city}" name="address.city" aria-describedby="cityHelp" placeholder="Enter you city"/>
+                <small id="cityHelp" class="form-text text-muted">We'll never share your name with anyone else :)</small>
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode"  th:field="*{address.postcode}" name="address.postcode" aria-describedby="postcodeHelp" placeholder="Enter you postcode"/>
+                <small id="postcodeHelp" class="form-text text-muted">We'll never share your name with anyone else :)</small>
+            </div>
+            <div class="form-group">
+                <label for="street">Street</label>
+                <input type="text" class="form-control" id="street"  th:field="*{address.street}" name="address.street"  aria-describedby="streetHelp" placeholder="Enter you street"/>
+                <small id="streetHelp" class="form-text text-muted">We'll never share your name with anyone else :)</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>
